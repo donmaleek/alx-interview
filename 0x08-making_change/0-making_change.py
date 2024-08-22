@@ -9,7 +9,7 @@ def makeChange(coins, total):
     val = [float('inf')] * (total + 1)
     val[0] = 0
 
-    for i in range(1, len(val)):
+    for i in range(1, total + 1):
         for j in range(len(coins)):
             if coins[j] <= i:
                 val[i] = min(val[i], val[i - coins[j]] + 1)
